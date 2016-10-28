@@ -40,7 +40,7 @@ import org.slf4j.Marker;
 public interface LocationAwareLogger extends Logger {
 
     // these constants should be in EventContants. However, in order to preserve binary backward compatibility
-    // we keep these constants here
+    // we keep these constants here(这些常量值本来应该在EventContants里的。然而，为了保护二进制兼容性，我们把它们放在了这里？没有理解！！！)
     final public int TRACE_INT = 00;
     final public int DEBUG_INT = 10;
     final public int INFO_INT = 20;

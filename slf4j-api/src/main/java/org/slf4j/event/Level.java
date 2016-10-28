@@ -7,7 +7,7 @@ import static org.slf4j.event.EventConstants.TRACE_INT;
 import static org.slf4j.event.EventConstants.WARN_INT;
 
 /**
- * 
+ * 日志级别，定义了5种：ERROR,WARN,INFO,DEBUG,TRACE
  * @author ceki
  * @since 1.7.15
  */

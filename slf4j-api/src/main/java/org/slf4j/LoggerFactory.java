@@ -43,18 +43,20 @@ import org.slf4j.impl.StaticLoggerBinder;
 
 /**
  * The <code>LoggerFactory</code> is a utility class producing Loggers for
- * various logging APIs, most notably for log4j, logback and JDK 1.4 logging.
+ * various logging APIs, most notably(值得注意) for log4j, logback and JDK 1.4 logging.
  * Other implementations such as {@link org.slf4j.impl.NOPLogger NOPLogger} and
  * {@link org.slf4j.impl.SimpleLogger SimpleLogger} are also supported.
+ * (LoggerFactory 是个通用的类用来获取不同API的Logger，比如log4j，logback，JDK1.5 logging等)
  * <p/>
  * <p/>
  * <code>LoggerFactory</code> is essentially a wrapper around an
  * {@link ILoggerFactory} instance bound with <code>LoggerFactory</code> at
  * compile time.
+ * (LoggerFactory 包装了一个ILoggerFactory )
  * <p/>
  * <p/>
  * Please note that all methods in <code>LoggerFactory</code> are static.
- * 
+ * (LoggerFactory 提供的方法都是静态的)
  * 
  * @author Alexander Dorokhine
  * @author Robert Elliot

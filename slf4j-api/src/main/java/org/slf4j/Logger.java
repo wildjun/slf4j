@@ -25,12 +25,18 @@
 
 package org.slf4j;
 
+import java.util.logging.Level;
+
+import org.omg.CORBA.ORB;
+
 /**
  * The org.slf4j.Logger interface is the main user entry point of SLF4J API.
  * It is expected that logging takes place through concrete implementations
  * of this interface.
+ * (预期是通过这个接口的具体实现类来产生记录)
  * <p/>
  * <h3>Typical usage pattern:</h3>
+ * (典型使用模式)
  * <pre>
  * import org.slf4j.Logger;
  * import org.slf4j.LoggerFactory;
@@ -52,8 +58,8 @@ package org.slf4j;
  * }
  * </pre>
  *
- * Be sure to read the FAQ entry relating to <a href="../../../faq.html#logging_performance">parameterized
- * logging</a>. Note that logging statements can be parameterized in
+ * Be sure(务必) to read the FAQ entry relating to（关于） <a href="../../../faq.html#logging_performance">parameterized
+ * logging</a>(参数化logging). Note that logging statements can be parameterized in
  * <a href="../../../faq.html#paramException">presence of an exception/throwable</a>.
  *
  * <p>Once you are comfortable using loggers, i.e. instances of this interface, consider using
@@ -65,7 +71,7 @@ public interface Logger {
 
     /**
      * Case insensitive String constant used to retrieve the name of the root logger.
-     *
+     * (字符串常量)
      * @since 1.3
      */
     final public String ROOT_LOGGER_NAME = "ROOT";
@@ -78,7 +84,8 @@ public interface Logger {
 
     /**
      * Is the logger instance enabled for the TRACE level?
-     *
+     * (是否启用TRACE级别,slf4f定义了5种日志级别，详见 Level)
+     * 
      * @return True if this Logger is enabled for the TRACE level,
      *         false otherwise.
      * @since 1.4
@@ -87,7 +94,7 @@ public interface Logger {
 
     /**
      * Log a message at the TRACE level.
-     *
+     * (记录一条信息在TRACE级别)
      * @param msg the message string to be logged
      * @since 1.4
      */
@@ -216,7 +223,7 @@ public interface Logger {
 
     /**
      * Is the logger instance enabled for the DEBUG level?
-     *
+     * (判断DEBUG级别是否启用)
      * @return True if this Logger is enabled for the DEBUG level,
      *         false otherwise.
      */
@@ -224,7 +231,7 @@ public interface Logger {
 
     /**
      * Log a message at the DEBUG level.
-     *
+     * 记录一条信息在DEBUG级别
      * @param msg the message string to be logged
      */
     public void debug(String msg);
